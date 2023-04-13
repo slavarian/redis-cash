@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            padding: 30px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<!--    {% for hotel in hotels %}-->
+<!--        <div class="card">-->
+<!--            <span>{{ hotel.name }}</span>-->
+<!--            <span>{{ hotel.price }}</span>-->
+<!--        </div>-->
+<!--    {% endfor %}-->
+    <h1>Закэшированные данные</h1><br>
+{% for i in redis_cash %}
+        <div class="card">
+            <span>{{ i.name }}</span>
+            <span>{{ i.price }}</span>
+        </div>
+    {% endfor %}
+</body>
+</html>
